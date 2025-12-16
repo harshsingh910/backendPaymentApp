@@ -31,8 +31,8 @@ jobs:
         username: ${{ secrets.EC2_USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          cd /home/ubuntu/loan-app-backend
+          cd /home/ubuntu/backendPaymentApp
           git pull origin main
           npm ci
           npm run build
-          pm2 restart loan-app
+          pm2 restart payment-app
